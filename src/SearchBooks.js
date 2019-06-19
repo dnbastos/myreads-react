@@ -10,7 +10,7 @@ class SearchBooks extends Component {
     searchedBooks: []
   }
 
-  updateSearch(query) {
+  updateSearch = query => {
     this.setState({ query });
     if (query) {
       BooksAPI.search(query).then(books => {
@@ -25,13 +25,19 @@ class SearchBooks extends Component {
     };
   }
 
+  getShelf = book => {
+    const booksWithShelf = this.props.books;
+    const bookWithShelf = booksWithShelf.filter(e => e.id === book.id)[0];
+    return bookWithShelf ? bookWithShelf.shelf : 'none';
+  }
+
   render() {
     const { searchedBooks } = this.state;
     return (
       <div className="search-books">
         <div className="search-books-bar">
           <Link to="/">
-            <button className="close-search">Close</button>
+            <button className="close-search" tabIndex="-1">Close</button>
           </Link>
           <div className="search-books-input-wrapper">
             <input
@@ -45,9 +51,10 @@ class SearchBooks extends Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-              {searchedBooks.map(book => (
-                <BookItem bookInfo={book} key={book.id} onUpdateBook={this.props.onUpdateBook} />
-              ))}
+              {searchedBooks.map(book => {
+                book.shelf = this.getShelf(book);
+                return <BookItem bookInfo={book} key={book.id} onUpdateBook={this.props.onUpdateBook} />
+              })}
           </ol>
         </div>
       </div>

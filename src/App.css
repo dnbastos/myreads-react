@@ -113,6 +113,10 @@ body, .app {
   outline: none;
 }
 
+.close-search:hover {
+  background-color: #c0c5c7;
+}
+
 button:active {
   border: red;
   outline: none;
