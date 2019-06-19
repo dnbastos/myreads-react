@@ -4,10 +4,11 @@ import * as BooksAPI from './BooksAPI';
 import ListBooks from './ListBooks';
 import SearchBooks from './SearchBooks';
 import Header from './Header';
+import DetailsBook from './DetailsBook';
 import './App.css';
 
 class App extends Component {
-  
+
   state = {
     books: []
   }
@@ -47,6 +48,11 @@ class App extends Component {
         )} />
         <Route path="/search" render={() => (
           <SearchBooks books={this.state.books} onUpdateBook={this.updateBook} />
+        )} />
+        <Route path="/details" render={({ history, location }) => (
+          <DetailsBook book={location.state} onBack={() => {
+            history.goBack();
+          }} />
         )} />
       </div>
     );

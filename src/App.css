@@ -10,10 +10,6 @@ body, .app {
   background: white;
 }
 
-button, select {
-  cursor: pointer;
-}
-
 /* main page */
 
 .list-books-title {
@@ -177,18 +173,18 @@ button:active {
   color: #6e6e6e;
 }
 
-.book-view-details button {
-  background: #2e7c31;
-  color: #fff;
+.book-view-details a {
   padding: 6px 10px;
-  border: none;
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.95rem;
+  display: inline-block;
   width: 100%;
+  background-color: #2e7c31;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
 }
 
-.book-view-details button:hover,
-.book-view-details button:focus {
+.book-view-details a:hover,
+.book-view-details a:focus {
   background-color: rgb(0, 102, 0);
 }
 
@@ -244,4 +240,51 @@ button:active {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+.details {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 10px 10px 40px;
+}
+
+.details-image {
+  float: left;
+}
+
+.details-title {
+  font-family: Merriweather, serif;
+  color: #2e7c31;
+  border-bottom: 1px solid #dedede;
+  text-align: center;
+}
+
+.details-text {
+  float: right;
+  max-width: 450px;
+  padding: 10px 0;
+}
+
+.details p {
+  margin: 0;
+}
+
+.details-back {
+  float: left;
+  clear: left;
+  padding: 20px 0;
+  width: 128px;
+}
+
+.details-back button {
+  width: 100%;
+  background-color: #2e7c31;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.details-back button:hover,
+.details-back button:focus {
+  background-color: rgb(0, 102, 0);
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class BookItem extends Component {
 
@@ -8,16 +9,19 @@ class BookItem extends Component {
 
   render() {
     const book = this.props.bookInfo;
+    const noCoveImageUrl = 'http://via.placeholder.com/128x193?text=No%20Cover';
     return (
       <li>
         <div className="book">
           <div className="book-top">
-            <div 
-              className="book-cover" 
-              style={{ backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail : '#'})` }}></div>
+            <div
+              className="book-cover"
+              style={{ backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail : noCoveImageUrl})` }}>
+            </div>
             <div className="book-shelf-changer">
-              <select 
-                onChange={event => this.handleUpdateBook(event, book)} 
+              <select
+                aria-label={'Shelf'}
+                onChange={event => this.handleUpdateBook(event, book)}
                 defaultValue={book.shelf}
               >
                 <option value="move" disabled>Move to...</option>
@@ -28,8 +32,13 @@ class BookItem extends Component {
               </select>
             </div>
           </div>
-          <div className="book-title">{book.title}</div>
-          <div className="book-authors">{book.authors ? book.authors.join(', ') : ''}</div>
+          <div className='book-main-info'>
+            <div className="book-title">{book.title}</div>
+            <div className="book-authors">{book.authors ? book.authors.join(', ') : ''}</div>
+          </div>
+          <div className="book-view-details">
+            <Link to={{pathname: '/details', state: book}}>View Details</Link>
+          </div>
         </div>
       </li>
     );
