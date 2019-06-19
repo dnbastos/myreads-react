@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import BookItem from './BookItem';
 
-function Shelf (title, shelfName, books, onUpdateBook) {
+function Shelf (props) {
   return (
     <div className="bookshelf">
-      <h2 className="bookshelf-title">{title}</h2>
+      <h2 className="bookshelf-title">{props.title}</h2>
       <div className="bookshelf-books">
         <ol className="books-grid">
-          {books.filter(book => book.shelf === shelfName)
+          {props.books.filter(book => book.shelf === props.shelfName)
           .map( book => (
-            <BookItem key={book.id} bookInfo={ book } onUpdateBook={onUpdateBook} />
+            <BookItem key={book.id} bookInfo={ book } onUpdateBook={props.onUpdateBook} />
           ))}
         </ol>
       </div>

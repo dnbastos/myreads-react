@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Shelf from './Shelf';
 import OpenSearch from './OpenSearch';
 
-function ListBooks (books, onUpdateBook) {
+function ListBooks (props) {
   return (
     <div>
       <div className="list-books-content">
         <Shelf 
           title='Currently Reading' 
           shelfName='currentlyReading' 
-          books={books}
-          onUpdateBook={onUpdateBook}  
+          books={props.books}
+          onUpdateBook={props.onUpdateBook}  
         />
         <Shelf 
           title='Want to Read' 
           shelfName='wantToRead' 
-          books={books}
-          onUpdateBook={onUpdateBook}
+          books={props.books}
+          onUpdateBook={props.onUpdateBook}
         />
         <Shelf 
           title='Read' 
           shelfName='read' 
-          books={books}
-          onUpdateBook={onUpdateBook}
+          books={props.books}
+          onUpdateBook={props.onUpdateBook}
         />
       </div>
       <OpenSearch />
