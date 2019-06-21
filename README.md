@@ -2,12 +2,14 @@
 
 > Student Project #5 during Front-End Development Nanodegree Program at Udacity.
 
-The purpose of this project is to demonstrate understanding of the basic structure and operation of a React-based app. This is the final assessment project for Udacity's React Fundamentals course.
+The MyReads project is an app where you can search and organize books, working like as your personal shelf. The books can classified by I `want to read`, `currently reading` and `Read`.
+
+The first purpose of this project is to demonstrate understanding of the basic structure and operation of a React-based app. This is the final assessment project for Udacity's React Fundamentals course.
 
 ## Instructions
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+* Install all project dependencies with `npm install`
+* Start the development server with `npm start`
 * With the server running, you can view in the browser: `http://localhost:3000`
 
 ## Important
