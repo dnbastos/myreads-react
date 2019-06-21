@@ -1,0 +1,50 @@
+/* books grid */
+
+.books-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.books-grid li {
+  padding: 10px 15px;
+  text-align: left;
+  border: 1px solid #eee; 
+  border-collapse: collapse;
+}
+
+.books-grid li:hover {
+  background: #eee; 
+}
+
+.book {
+  width: 140px;
+}
+
+.book-main-info {
+  font-size: 0.8em;
+  height: 70px;
+  overflow: hidden;
+}
+
+.book-title {
+  margin-top: 10px;
+  overflow: hidden; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.book-authors {
+  color: #6e6e6e;
+}
+
+.book-top {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+}
+

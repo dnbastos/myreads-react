@@ -1,6 +1,7 @@
 import React from 'react';
 import Shelf from './Shelf';
 import OpenSearch from './OpenSearch';
+import './style/mainPage.css';
 
 function ListBooks (props) {
   return (

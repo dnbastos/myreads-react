@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { DebounceInput } from 'react-debounce-input'
 import * as BooksAPI from './BooksAPI';
 import BookItem from './BookItem';
+import './style/searchPage.css';
 
 class SearchBooks extends Component {
 
@@ -33,7 +34,7 @@ class SearchBooks extends Component {
   }
 
   render() {
-    const { searchedBooks } = this.state;
+    const { searchedBooks, query } = this.state;
     return (
       <div className="search-books">
         <div className="search-books-bar">
@@ -44,7 +45,7 @@ class SearchBooks extends Component {
             <DebounceInput
               type="text"
               placeholder="Search by title or author"
-              value={this.state.query}
+              value={query}
               onChange={event => (this.updateSearch(event.target.value))}
               minLength={2}
               debounceTimeout={400}
@@ -54,10 +55,10 @@ class SearchBooks extends Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-              {searchedBooks.map(book => {
-                book.shelf = this.getShelf(book);
-                return <BookItem bookInfo={book} key={book.id} onUpdateBook={this.props.onUpdateBook} />
-              })}
+            {searchedBooks.map(book => {
+              book.shelf = this.getShelf(book);
+              return <BookItem book={book} key={book.id} onUpdateBook={this.props.onUpdateBook} />
+            })}
           </ol>
         </div>
       </div>

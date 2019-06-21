@@ -1,0 +1,62 @@
+.details {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 10px 10px 40px;
+}
+
+.details-image {
+  float: left;
+  padding-right: 10px;
+}
+
+.details-title {
+  font-family: Merriweather, serif;
+  color: #2e7c31;
+  border-bottom: 1px solid #dedede;
+  text-align: center;
+}
+
+.details-text {
+  float: right;
+  max-width: 450px;
+  padding: 10px 0;
+}
+
+.details p {
+  margin: 0;
+}
+
+.details-back {
+  float: left;
+  clear: left;
+  padding: 20px 0;
+  width: 128px;
+}
+
+.details-back button {
+  width: 100%;
+  background-color: #2e7c31;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.details-back button:hover,
+.details-back button:focus {
+  background-color: rgb(0, 102, 0);
+}
+
+.book-view-details a {
+  padding: 6px 10px;
+  display: inline-block;
+  width: 100%;
+  background-color: #2e7c31;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.book-view-details a:hover,
+.book-view-details a:focus {
+  background-color: rgb(0, 102, 0);
+}

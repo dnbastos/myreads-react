@@ -1,0 +1,18 @@
+html, body, .root {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+body, .app {
+  background: white;
+}
+
+@import 'mainPage.css';
+@import 'searchPage.css';
+@import 'bookCover.css';
+@import 'booksGrid.css';
+@import 'shelfChanger.css';
+@import 'bookDetails.css';
