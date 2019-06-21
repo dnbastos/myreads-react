@@ -16,7 +16,7 @@ function DetailsBook(props) {
       <h2 className='details-title'>{book.title}</h2>
       <div className='book-top details-image'>
         <div
-          className="book-cover"
+          className='book-cover'
           style={{ backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail : noCoveImageUrl})` }}>
         </div>
         <ShelfChanger book={book} onUpdateBook={onUpdateBook} />
@@ -33,8 +33,8 @@ function DetailsBook(props) {
         <b>Description</b>
         <p>{book.description}</p>
       </div>
-      <div className="details-back">
-        <button onClick={onBack}>voltar</button>
+      <div className='details-back'>
+        <button className='btn' onClick={onBack}>voltar</button>
       </div>
     </div>
   );

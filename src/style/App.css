@@ -10,6 +10,25 @@ body, .app {
   background: white;
 }
 
+.btn {
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  background-color: #2e7c31;
+  font-size: 1rem;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(0, 102, 0);
+}
+
 @import 'mainPage.css';
 @import 'searchPage.css';
 @import 'bookCover.css';
