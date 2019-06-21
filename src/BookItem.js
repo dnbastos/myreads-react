@@ -5,7 +5,7 @@ import ShelfChanger from './ShelfChanger';
 class BookItem extends Component {
 
   render() {
-    const { book, query, onUpdateBook } = this.props;
+    const { book, onUpdateBook } = this.props;
     const noCoveImageUrl = 'http://via.placeholder.com/128x193?text=No%20Cover';
     return (
       <li>
@@ -22,7 +22,7 @@ class BookItem extends Component {
             <div className='book-authors'>{book.authors ? book.authors.join(', ') : ''}</div>
           </div>
           <div className='book-view-details'>
-            <Link className='btn' to={{ pathname: '/details', state: book }}>View Details</Link>
+            <Link className='btn' to={{ pathname: '/details', state: book, search: `bookId=${book.id}` }}>View Details</Link>
           </div>
         </div>
       </li>

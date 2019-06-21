@@ -54,6 +54,7 @@ class App extends Component {
             book={location.state} 
             onUpdateBook={this.updateBook} 
             onBack={() => history.goBack()}
+            query={location.search}
           />
         )} />
       </div>

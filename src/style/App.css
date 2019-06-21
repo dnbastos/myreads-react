@@ -20,13 +20,17 @@ body, .app {
   cursor: pointer;
   border: none;
   text-align: center;
-  text-decoration: none;
   width: 100%;
 }
 
 button:hover,
 button:focus {
   background-color: rgb(0, 102, 0);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 @import 'mainPage.css';
