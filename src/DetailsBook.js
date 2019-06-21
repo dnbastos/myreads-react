@@ -45,7 +45,7 @@ class DetailsBook extends Component {
           <p>{book.description}</p>
         </div>
         <div className='details-back'>
-          <button className='btn' onClick={onBack}>voltar</button>
+          <button className='btn' onClick={onBack}>Back</button>
         </div>
       </div>
     );
